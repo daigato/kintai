@@ -56,6 +56,30 @@ flowchart TB
     WorkersBackend <--> D1DB
 ```
 
+### 業務シーケンス（LINE打刻・通知フロー）
+
+従業員が打刻してから所属グループへ通知されるまでのイベントフローです。
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Employee as 従業員
+    participant LINE as LINE トーク / LIFF
+    participant Backend as Cloudflare Workers (API)
+    participant DB as Cloudflare D1
+    participant Group as 店舗・チーム LINE グループ
+
+    Employee->>LINE: 「出勤」送信 または LIFFで出勤タップ
+    LINE->>Backend: Webhook / REST API リクエスト
+    Backend->>DB: ユーザー照会 & 二重打刻チェック
+    Backend->>DB: 出勤レコード保存 (attendance_records)
+    Backend->>DB: 所属グループ取得 (user_groups)
+    Backend-->>LINE: 打刻完了メッセージ返信 (Reply Message)
+    opt 所属グループが存在する場合
+        Backend->>Group: 「〇〇さんが出勤しました」通知 (Push Message)
+    end
+```
+
 ---
 
 ## 3. 主要機能ハイライト
