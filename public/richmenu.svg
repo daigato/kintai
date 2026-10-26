@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 843" width="2500" height="843">
+  <defs>
+    <!-- グラデーション定義 -->
+    <linearGradient id="grad-clockin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="grad-clockout" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="grad-liff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- 影効果 -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+    <filter id="icon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- 背景ベース -->
+  <rect width="2500" height="843" fill="#f8fafc" />
+
+  <!-- ==================== 1. 出勤ボタン（左） ==================== -->
+  <g transform="translate(24, 24)">
+    <rect width="785" height="795" rx="36" fill="url(#grad-clockin)" filter="url(#shadow)" />
+    <!-- 装飾円 -->
+    <circle cx="680" cy="120" r="140" fill="#ffffff" opacity="0.08" />
+    <circle cx="100" cy="700" r="180" fill="#ffffff" opacity="0.06" />
+
+    <!-- アイコン: 出勤（時計と再生） -->
+    <g transform="translate(392.5, 270)" filter="url(#icon-shadow)">
+      <circle cx="0" cy="0" r="85" fill="#ffffff" opacity="0.2" />
+      <!-- 時計サークル -->
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+      <!-- 針 -->
+      <polyline points="0,-35 0,0 25,12" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- テキスト -->
+    <text x="392.5" y="490" text-anchor="middle" font-family="'Helvetica Neue', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif" font-size="96" font-weight="900" fill="#ffffff" letter-spacing="4">出勤</text>
+    <text x="392.5" y="560" text-anchor="middle" font-family="'Helvetica Neue', sans-serif" font-size="32" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="6">CLOCK IN</text>
+    <rect x="292.5" y="610" width="200" height="44" rx="22" fill="#ffffff" opacity="0.25" />
+    <text x="392.5" y="640" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="24" font-weight="700" fill="#ffffff">タップで打刻</text>
+  </g>
+
+  <!-- ==================== 2. 退勤ボタン（中央） ==================== -->
+  <g transform="translate(857, 24)">
+    <rect width="785" height="795" rx="36" fill="url(#grad-clockout)" filter="url(#shadow)" />
+    <!-- 装飾円 -->
+    <circle cx="680" cy="120" r="140" fill="#ffffff" opacity="0.08" />
+    <circle cx="100" cy="700" r="180" fill="#ffffff" opacity="0.06" />
+
+    <!-- アイコン: 退勤（チェックマーク） -->
+    <g transform="translate(392.5, 270)" filter="url(#icon-shadow)">
+      <circle cx="0" cy="0" r="85" fill="#ffffff" opacity="0.2" />
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+      <polyline points="-28,-2 -8,20 32,-22" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- テキスト -->
+    <text x="392.5" y="490" text-anchor="middle" font-family="'Helvetica Neue', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif" font-size="96" font-weight="900" fill="#ffffff" letter-spacing="4">退勤</text>
+    <text x="392.5" y="560" text-anchor="middle" font-family="'Helvetica Neue', sans-serif" font-size="32" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="6">CLOCK OUT</text>
+    <rect x="292.5" y="610" width="200" height="44" rx="22" fill="#ffffff" opacity="0.25" />
+    <text x="392.5" y="640" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="24" font-weight="700" fill="#ffffff">タップで打刻</text>
+  </g>
+
+  <!-- ==================== 3. 勤怠画面ボタン（右） ==================== -->
+  <g transform="translate(1690, 24)">
+    <rect width="785" height="795" rx="36" fill="url(#grad-liff)" filter="url(#shadow)" />
+    <!-- 装飾円 -->
+    <circle cx="680" cy="120" r="140" fill="#ffffff" opacity="0.08" />
+    <circle cx="100" cy="700" r="180" fill="#ffffff" opacity="0.06" />
+
+    <!-- アイコン: カレンダー & ダッシュボード -->
+    <g transform="translate(392.5, 270)" filter="url(#icon-shadow)">
+      <circle cx="0" cy="0" r="85" fill="#ffffff" opacity="0.2" />
+      <!-- カレンダー外枠 -->
+      <rect x="-55" y="-45" width="110" height="100" rx="16" fill="none" stroke="#ffffff" stroke-width="11" />
+      <!-- 上部ライン -->
+      <line x1="-55" y1="-15" x2="55" y2="-15" stroke="#ffffff" stroke-width="10" />
+      <!-- フック -->
+      <line x1="-28" y1="-60" x2="-28" y2="-45" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+      <line x1="28" y1="-60" x2="28" y2="-45" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+      <!-- 日付ドット -->
+      <circle cx="-25" cy="15" r="7" fill="#ffffff" />
+      <circle cx="0" cy="15" r="7" fill="#ffffff" />
+      <circle cx="25" cy="15" r="7" fill="#ffffff" />
+      <circle cx="-25" cy="38" r="7" fill="#ffffff" />
+      <circle cx="0" cy="38" r="7" fill="#ffffff" />
+    </g>
+
+    <!-- テキスト -->
+    <text x="392.5" y="490" text-anchor="middle" font-family="'Helvetica Neue', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif" font-size="88" font-weight="900" fill="#ffffff" letter-spacing="2">勤怠画面</text>
+    <text x="392.5" y="560" text-anchor="middle" font-family="'Helvetica Neue', sans-serif" font-size="30" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="5">DASHBOARD</text>
+    <rect x="262.5" y="610" width="260" height="44" rx="22" fill="#ffffff" opacity="0.25" />
+    <text x="392.5" y="640" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="24" font-weight="700" fill="#ffffff">カレンダー・履歴確認</text>
+  </g>
+</svg>

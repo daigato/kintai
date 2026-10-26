@@ -1,0 +1,14 @@
+name = "kinntai-backend"
+main = "src/index.ts"
+compatibility_date = "2024-03-20"
+
+# D1 Database binding
+# npx wrangler d1 create kinntai-db で生成された database_id を設定してください
+[[d1_databases]]
+binding = "DB"
+database_name = "kinntai-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+# Secrets such as LINE_CHANNEL_ACCESS_TOKEN and LINE_CHANNEL_SECRET
+# should be configured via `wrangler secret put <KEY>` for production,
+# or in `.dev.vars` for local development.
