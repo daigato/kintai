@@ -33,3 +33,6 @@ dist-ssr
 # AI / Agent directories
 .agents/
 .agent/
+
+# Internal docs / Deployment notes
+DEPLOYMENT_GUIDE.md
