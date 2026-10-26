@@ -161,5 +161,5 @@ npm run dev
 
 システムの詳細な設計・運用手順については、以下のドキュメントをご参照ください。
 
-- [業務仕様および詳細設計書 (SPECIFICATION.md)](SPECIFICATION.md): 労務計算ロジック、CSV仕様、DBスキーマの詳細
+- [システム詳細設計書 (SPECIFICATION.md)](SPECIFICATION.md): 労務計算ロジック、CSV仕様、DBスキーマの詳細
 - [デプロイ＆実用化運用ガイド (DEPLOYMENT_GUIDE.md)](DEPLOYMENT_GUIDE.md): Cloudflare 本番デプロイ手順、LINE コンソール設定、リッチメニュー設置ガイド
